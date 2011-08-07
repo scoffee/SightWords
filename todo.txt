@@ -1,0 +1,120 @@
+ispeech.org api key
+	web eval key: 14afd308f11b01a1ec6b775871d9f247
+	mobile dev key: a69bb668646a3b75d7987c829c485275
+	http://api.ispeech.org/api/rest?apikey=14afd308f11b01a1ec6b775871d9f247&action=convert&text=a
+game options
+  - audio announcement and multiple choice from several words, possible animated
+  - concentration matching
+  - bingo
+  - word search
+  - word unscramble
+
+
+Set up list of words
+  xml
+  include options for audio files, movies, pictures, etc.
+Set up single trial
+  Set up N buttons
+  Choose answer
+  Choose decoys
+  Place randomly into buttons
+  Show screen
+  play answer sound
+  handle clicks
+  right answer turns green
+  wrong answer turns red
+Track history
+  points
+  problem word stats (also track misidentifications in order to present hardest words)
+  track recency of exposure to optimize presentation rate for known words, tapering off over 
+
+time.
+
+Background music?
+Streak tracker with visual/auditory excitement increasing with streak.
+Design some kind of progressive skinner box reward
+	add pieces to a car, clothes to a doll, toys for a pet, etc.
+Positive reinforcement for correct choices
+	Fireworks
+	Confetti
+	"Yay!"
+	Applause
+	Dancing characters
+	pop up gift similar to PvZ
+Review word list for homonyms
+	list homonyms in xml so system can avoid showing them together.
+	all homonyms should really be grouped under a single word with a single audio file and combined statistics
+Main page
+	Choose Player
+	Choose Word List
+	Start Game
+	Show Statistics
+Game Page
+	Show four buttons
+	Right #
+	Wrong #
+	Quit button at bottom
+	Say word, repeating every few seconds for perhaps 3 repetitions.
+	Include a button to replay the sound
+Choose Player Page
+	Show player list
+	Option to add new player
+Choose Word List PAge
+	Select from list
+Statistics - Player Level
+	Choose Player
+	Table with row for each word list
+		Show overall mastery level for word list (50% or 3/4 stars...)
+		Right navigation to drill into word level stats
+	Back option
+Statistics - List Level
+	Show word list in title
+	table row for each word
+		word mastery level
+		streak (4 right or 3 wrong)
+		overall history 5/18 right
+	right navigation to word choices
+Statistics - Word Level
+	Show list of words player has chosen when presented with this audio cue
+	First item should be correct word (or words for homonyms) shown in green
+	Remaining items should be shown in descending order of selection frequency
+	Show mastery level at top of window
+
+Consider options to make the game more visually complex and interesting
+
+
+- create bouncing balls with buttons
+  - each button has a size based on word length, mass based on size
+  - collisions are perfectly elastic
+    - calculate impact energy perpendicular to contact point, based on mass and perpendicular speed component
+    - apply impact energy to both, compensating for mass
+    - can animarions be interrupted?
+    - set timer to check collisions
+- start with static word list
+- present randomized play field
+- show four choices
+- wait for correct choice
+- repeat
+- choose random word and play sound
+- determine best audio format based on size/quality ratio - probably mono mp3 at low data rate
+  - research compatibility across platforms
+- show correct word and some random words
+- wait for child to choose
+- replay word every few second or on a bad choice
+- sound effects for right/wrong choice
+- animate words as bouncing bubbles
+  - include rotation?
+- set up list of sight words as xml
+  - perhaps a generic q/a file, which could include text/audio/visual/point value and other properties in knowledge list
+    - this could even be used as a music memory trainer
+    - aftermarket content might make this a user supported games
+    - other games/apps could support the same knowledge file format
+    - text to speech and voice recognition would be very cool features
+- think about ways to turn this into a game
+  - points
+  - achievements
+  - embed in another game, where choosing the right word is just a part of the game
+    - aliens encroach, speaking words.  They can only be defeated by dropping/shooting with the correct word
+      - could be used for other choices, such as antonyms, spelling, math, jeopardy-like questions
+    - falling objects, similar to tux math
+    -  
