@@ -1,64 +1,71 @@
 // this sets the background color of the master UIView (when there are no windows/tab groups on it)
 Titanium.UI.setBackgroundColor('#000');
 
-// create tab group
-var tabGroup = Titanium.UI.createTabGroup();
 
-
-//
-// create base UI tab and root window
-//
-var win1 = Titanium.UI.createWindow({  
-    title:'Tab 1',
+var winMain = Titanium.UI.createWindow({  
+    title:'Main',
     backgroundColor:'#fff'
 });
-var tab1 = Titanium.UI.createTab({  
-    icon:'KS_nav_views.png',
-    title:'Tab 1',
-    window:win1
-});
 
-var label1 = Titanium.UI.createLabel({
-	color:'#999',
-	text:'I am Window 1',
-	font:{fontSize:20,fontFamily:'Helvetica Neue'},
-	textAlign:'center',
-	width:'auto'
+var winGame = Titanium.UI.createWindow({  
+    title:'Game',
+    backgroundColor:'#fff',
+    url:'game_window.js'
 });
-
-win1.add(label1);
 
 //
-// create controls tab and root window
+// testSound 
 //
-var win2 = Titanium.UI.createWindow({  
-    title:'Tab 2',
-    backgroundColor:'#fff'
+var testSound = Titanium.UI.createButton({
+	title:'Test Sound',
+	height:40,
+	width:145,
+	left:10,
+	top:10
 });
-var tab2 = Titanium.UI.createTab({  
-    icon:'KS_nav_ui.png',
-    title:'Tab 2',
-    window:win2
+testSound.addEventListener('click', function()
+{
+	var file = Titanium.Filesystem.getFile(Titanium.Filesystem.resourcesDirectory,'can.mp3');
+	var sound = Titanium.Media.createSound({sound:file});
+	sound.addEventListener('complete',function(){
+		var file = Titanium.Filesystem.getFile(Titanium.Filesystem.resourcesDirectory,'can.mp3');
+		var sound = Titanium.Media.createSound({sound:file,preload:true});
+		sound.addEventListener('complete',function(){
+			var file = Titanium.Filesystem.getFile(Titanium.Filesystem.resourcesDirectory,'can.mp3');
+			var sound = Titanium.Media.createSound({sound:file});
+			sound.addEventListener('complete',function(){
+			});
+			sound.play();
+		});
+		sound.play();
+	});
+	sound.setLooping(false);
+	sound.play();
+});
+winMain.add(testSound);
+
+var testSound = Titanium.UI.createButton({
+	title:'Start Game',
+	height:40,
+	width:145,
+	left:10,
+	top:10
 });
 
-var label2 = Titanium.UI.createLabel({
-	color:'#999',
-	text:'I am Window 2',
-	font:{fontSize:20,fontFamily:'Helvetica Neue'},
-	textAlign:'center',
-	width:'auto'
+// start game
+var btnStartGame = Titanium.UI.createButton({
+	title:'Start Game',
+	height:40,
+	width:145,
+	left:10,
+	top:90
 });
-
-win2.add(label2);
-
-
-
-//
-//  add tabs
-//
-tabGroup.addTab(tab1);  
-tabGroup.addTab(tab2);  
+btnStartGame.addEventListener('click', function()
+{
+	
+});
+winMain.add(btnStartGame);
 
 
-// open tab group
-tabGroup.open();
+winMain.open();
+
