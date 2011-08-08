@@ -1,3 +1,7 @@
+StoreData
+
+read xml
+
 ispeech.org api key
 	web eval key: 14afd308f11b01a1ec6b775871d9f247
 	mobile dev key: a69bb668646a3b75d7987c829c485275
@@ -44,11 +48,7 @@ Positive reinforcement for correct choices
 Review word list for homonyms
 	list homonyms in xml so system can avoid showing them together.
 	all homonyms should really be grouped under a single word with a single audio file and combined statistics
-Main page
-	Choose Player
-	Choose Word List
-	Start Game
-	Show Statistics
+
 Game Page
 	Show four buttons
 	Right #
@@ -117,4 +117,7 @@ Consider options to make the game more visually complex and interesting
     - aliens encroach, speaking words.  They can only be defeated by dropping/shooting with the correct word
       - could be used for other choices, such as antonyms, spelling, math, jeopardy-like questions
     - falling objects, similar to tux math
-    -  
+    - 
+- when choosing decoy words, use a weighted average based on history.  
+
+- how do we keep the database in sync after updates

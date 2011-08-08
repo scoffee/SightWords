@@ -1,62 +1,41 @@
-// this sets the background color of the master UIView (when there are no windows/tab groups on it)
-Titanium.UI.setBackgroundColor('#000');
+//initialization
 
+//db
+var db = Titanium.Database.open('mydb');
+
+//players(player_id, name)
+db.execute('Create table if not exists ' +
+	' Players(' +
+	' 	Player_ID integer primary key, ' +
+	' 	Name text)');
+
+//player_words(player_word_id, player_id, word, correct_count, incorrect_count)
+db.execute('Create table if not exists ' +
+	' Player_Words(' +
+	' 	Player_Word_ID integer primary key, ' +
+	' 	Player_ID integer, ' +
+	' 	Word text, ' +
+	' 	Correct_Count integer, ' +
+	' 	Incorrect_Count integer)');
+
+//player_word_choices(player_word_id, player_id, 
+//		correct_word, option_word, total_trial_count, chosen_count)
+db.execute('Create table if not exists ' +
+	' Player_Word_Choices(' +
+	' 	Player_Word_Choice_ID integer primary key, ' +
+	' 	Player_ID integer, ' +
+	' 	Correct_Word text, ' +
+	' 	Option_Word text, ' +
+	' 	Total_Trial_Count integer, ' +
+	' 	Chosen_Count integer)');
+
+
+//open main window
 var winMain = Titanium.UI.createWindow({  
     title:'Main',
-    backgroundColor:'#fff'
+    backgroundColor:'#fff',
+    url:'main_windows/main.js'
 });
-
-//
-// testSound 
-//
-var testSound = Titanium.UI.createButton({
-	title:'Test Sound',
-	height:40,
-	width:145,
-	left:10,
-	top:10
-});
-
-testSound.addEventListener('click', function()
-{
-	var file = Titanium.Filesystem.getFile(Titanium.Filesystem.resourcesDirectory,'sounds/big.mp3');
-	var sound = Titanium.Media.createSound({sound:file});
-	sound.addEventListener('complete',function(){
-		var file = Titanium.Filesystem.getFile(Titanium.Filesystem.resourcesDirectory,'sounds/blue.mp3');
-		var sound = Titanium.Media.createSound({sound:file,preload:true});
-		sound.addEventListener('complete',function(){
-			var file = Titanium.Filesystem.getFile(Titanium.Filesystem.resourcesDirectory,'sounds/can.mp3');
-			var sound = Titanium.Media.createSound({sound:file});
-			sound.addEventListener('complete',function(){
-			});
-			sound.play();
-		});
-		sound.play();
-	});
-	sound.setLooping(false);
-	sound.play();
-});
-winMain.add(testSound);
-
-// start game
-var btnStartGame = Titanium.UI.createButton({
-	title:'Start Game',
-	height:40,
-	width:145,
-	left:10,
-	top:90
-});
-btnStartGame.addEventListener('click', function()
-{
-	var winGame = Titanium.UI.createWindow({  
-	    title:'Game',
-	    backgroundColor:'#fff',
-	    url:'main_windows/game.js'
-	});
-	winGame.open();
-});
-winMain.add(btnStartGame);
-
 
 winMain.open();
 
