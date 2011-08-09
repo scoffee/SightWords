@@ -1,17 +1,16 @@
 Logfile initialized
-[INFO] logfile = C:\Users\Administrator\My Documents\Titanium Studio Workspace\SightWords\build.log
-[DEBUG] C:\ProgramData\Titanium\mobilesdk\win32\1.7.2\android\builder.py simulator SightWords C:\Android\android-sdk C:\Users\Administrator\My Documents\Titanium Studio Workspace\SightWords com.ConsultMore.edu.SightWords 1 HVGA
+[INFO] logfile = C:\Users\Steve\Documents\Titanium Studio Workspace\SightWords\build.log
+[DEBUG] C:\ProgramData\Titanium\mobilesdk\win32\1.7.2\android\builder.py simulator SightWords C:\dev\Android\android-sdk C:\Users\Steve\Documents\Titanium Studio Workspace\SightWords com.ConsultMore.edu.SightWords 6 WVGA854
 [INFO] Building SightWords for Android ... one moment
 [INFO] Titanium SDK version: 1.7.2 (07/21/11 09:36 97c3689)
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.012000 seconds on emulator to get ready
+[DEBUG] waited 0.056000 seconds on emulator to get ready
 [DEBUG] com.ConsultMore.edu.SightWords installed? True
 [INFO] Fastdev server running, deploying in Fastdev mode
 [INFO] Copying project resources..
-[TRACE] COPYING MODIFIED FILE: C:\Users\Administrator\My Documents\Titanium Studio Workspace\SightWords\Resources\main_windows\player_list_stats.js => C:\Users\Administrator\My Documents\Titanium Studio Workspace\SightWords\build\android\bin\assets\Resources\main_windows\player_list_stats.js
-[TRACE] COPYING MODIFIED FILE: C:\Users\Administrator\My Documents\Titanium Studio Workspace\SightWords\Resources\main_windows\tests.js => C:\Users\Administrator\My Documents\Titanium Studio Workspace\SightWords\build\android\bin\assets\Resources\main_windows\tests.js
+[TRACE] COPYING MODIFIED FILE: C:\Users\Steve\Documents\Titanium Studio Workspace\SightWords\Resources\main_windows\main.js => C:\Users\Steve\Documents\Titanium Studio Workspace\SightWords\build\android\bin\assets\Resources\main_windows\main.js
 [INFO] Tiapp.xml unchanged, skipping class generation
 [DEBUG] Processing Android resource drawables
 [INFO] Waiting for SDCard to become available..

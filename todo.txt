@@ -118,6 +118,11 @@ Consider options to make the game more visually complex and interesting
       - could be used for other choices, such as antonyms, spelling, math, jeopardy-like questions
     - falling objects, similar to tux math
     - 
-- when choosing decoy words, use a weighted average based on history.  
+- when choosing decoy words, use a weighted average based on history.
+- present words as decoys that have not been presented with the answer word
+- consider for decoys both words incorrectly chosen when the current 
+	correct word was presented and also words that were the correct answer
+	when the current correct word was incorrectly chosen.
+  
 
 - how do we keep the database in sync after updates

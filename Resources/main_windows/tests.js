@@ -8,7 +8,7 @@ var db = Titanium.Database.open('mydb');
 db.execute('insert into players (NAME) VALUES(?)','Steve');
 
 //read all rows
-var rows = db.execute('select * from players')
+var rows = db.execute('select * from players order by name')
 while (rows.isValidRow()) {
 	Titanium.API.info('Player_ID: ' + rows.fieldByName('Player_ID') 
 		+ ' NAME: ' + rows.fieldByName('name'));
