@@ -72,6 +72,6 @@ var btnTests = Titanium.UI.createButton({
 	title:'Tests',width:Titanium.Platform.displayCaps.platformWidth/2,left:Titanium.Platform.displayCaps.platformWidth/4,top:margin+btnStatistics.top+btnStatistics.height});
 btnTests.addEventListener('click', function(){
 	Titanium.UI.createWindow({  
-	    title:'Tests',url:'main_windows/tests.js',backgroundColor:'#888'}).open();
+	    title:'Tests',url:'main_windows/tests.js',backgroundColor:'#fff'}).open();
 });
 winMain.add(btnTests);

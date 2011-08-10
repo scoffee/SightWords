@@ -1,22 +1,12 @@
-StoreData
-
-read xml
+read xml word list
+	each time?
+	merge into DB?
 
 ispeech.org api key
 	web eval key: 14afd308f11b01a1ec6b775871d9f247
 	mobile dev key: a69bb668646a3b75d7987c829c485275
 	http://api.ispeech.org/api/rest?apikey=14afd308f11b01a1ec6b775871d9f247&action=convert&text=a
-game options
-  - audio announcement and multiple choice from several words, possible animated
-  - concentration matching
-  - bingo
-  - word search
-  - word unscramble
 
-
-Set up list of words
-  xml
-  include options for audio files, movies, pictures, etc.
 Set up single trial
   Set up N buttons
   Choose answer
@@ -125,4 +115,13 @@ Consider options to make the game more visually complex and interesting
 	when the current correct word was incorrectly chosen.
   
 
-- how do we keep the database in sync after updates
+-  how do we keep the database in sync after updates
+
+Future options
+game options
+  - animation of word choices
+  - concentration matching
+  - bingo
+  - word search
+  - word unscramble
+- include options in xml word list for audio files, movies, pictures, etc.
