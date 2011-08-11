@@ -1,4 +1,5 @@
 build/
 tmp
 build.log
-fastdev.lock
+.fastdev.lock
+
