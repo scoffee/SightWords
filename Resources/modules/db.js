@@ -1,27 +1,31 @@
+/*jslint forin: true, maxerr: 50, indent: 4 */
+/*global Ti */
+
 // encapsulate all db interaction
 
 var db = (function () { 
-    // ... all vars and functions are in this scope only 
-    // still maintains access to all globals
-    var my = {}, 
-    	conn; 
+	"use strict";
+
+    var my = {}, conn; 
      
-    function MyConnection() {
-    	if (conn == undefined) {
-			conn = Titanium.Database.open('mydb');
-   		} 
+    function myConnection() {
+		if (conn === undefined) {
+			conn = Ti.Database.open('mydb');
+		} 
         return conn;
     } 
 
-	my.getPlayers = function(){
-		var rows = MyConnection().execute('select * from players order by name');
-		var result=[];
+	my.getPlayers = function () {
+		var rows, result = [];
+		
+		rows = myConnection().execute('select * from players order by name');
+		result = [];
 		while (rows.isValidRow()) {
-			result.push({name:rows.fieldByName('name'), id:rows.fieldByName('Player_ID')});
+			result.push({name : rows.fieldByName('name'), id : rows.fieldByName('Player_ID')});
 			rows.next();
 		}
 		return result;
-	}     
+	};     
 
 //insert test row
 //db.execute('insert into players (NAME) VALUES(?)','Steve');

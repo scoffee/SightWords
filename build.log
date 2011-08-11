@@ -1,12 +1,12 @@
 Logfile initialized
 [INFO] logfile = C:\Users\Steve\Documents\Titanium Studio Workspace\SightWords\build.log
-[DEBUG] C:\ProgramData\Titanium\mobilesdk\win32\1.7.2\android\builder.py simulator SightWords C:\dev\Android\android-sdk C:\Users\Steve\Documents\Titanium Studio Workspace\SightWords com.ConsultMore.edu.SightWords 6 WVGA854 192.168.42.104:17695
+[DEBUG] C:\ProgramData\Titanium\mobilesdk\win32\1.7.2\android\builder.py simulator SightWords C:\dev\Android\android-sdk C:\Users\Steve\Documents\Titanium Studio Workspace\SightWords com.ConsultMore.edu.SightWords 6 WVGA854 192.168.42.104:19181
 [INFO] Building SightWords for Android ... one moment
 [INFO] Titanium SDK version: 1.7.2 (07/21/11 09:36 97c3689)
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.058000 seconds on emulator to get ready
+[DEBUG] waited 0.057000 seconds on emulator to get ready
 [DEBUG] com.ConsultMore.edu.SightWords installed? True
 [INFO] Fastdev server running, deploying in Fastdev mode
 [INFO] Copying project resources..
