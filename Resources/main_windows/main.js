@@ -54,7 +54,7 @@ var btnStartGame = Titanium.UI.createButton({
 	title:'Start Game',height:80,width:Titanium.Platform.displayCaps.platformWidth/2,left:Titanium.Platform.displayCaps.platformWidth/4,top:margin+picWordList.top+picWordList.height});
 btnStartGame.addEventListener('click', function(){
 	Titanium.UI.createWindow({  
-	    title:'Game',url:'main_windows/game.js',backgroundColor:'#008'}).open();
+	    title:'Game',url:'game.js',backgroundColor:'#008'}).open();
 });
 winMain.add(btnStartGame);
 
@@ -63,7 +63,7 @@ var btnStatistics = Titanium.UI.createButton({
 	title:'Player Statistics',height:80,width:Titanium.Platform.displayCaps.platformWidth/2,left:Titanium.Platform.displayCaps.platformWidth/4,top:margin+btnStartGame.top+btnStartGame.height});
 btnStatistics.addEventListener('click', function(){
 	Titanium.UI.createWindow({  
-	    title:'Player Statistics',url:'main_windows/player_stats.js',backgroundColor:'#800'}).open();
+	    title:'Player Statistics',url:'player_stats.js',backgroundColor:'#800'}).open();
 });
 winMain.add(btnStatistics);
 
@@ -72,6 +72,6 @@ var btnTests = Titanium.UI.createButton({
 	title:'Tests',width:Titanium.Platform.displayCaps.platformWidth/2,left:Titanium.Platform.displayCaps.platformWidth/4,top:margin+btnStatistics.top+btnStatistics.height});
 btnTests.addEventListener('click', function(){
 	Titanium.UI.createWindow({  
-	    title:'Tests',url:'main_windows/tests.js',backgroundColor:'#fff'}).open();
+	    title:'Tests',url:'tests.js',backgroundColor:'#fff'}).open();
 });
 winMain.add(btnTests);
